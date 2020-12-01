@@ -5,8 +5,8 @@ import "./Story.css";
 {/*Image-image,Profile Pic-profileSrc and Name as title*/}
 function Story({image,profileSrc,title}) {
     return (
-        <div className="story">
-            <Avatar src={profileSrc}/>
+        <div style={{backgroundImage:`url(${image})`}}className="story">
+            <Avatar className="story__avatar" src={profileSrc}/>
             <h4>{title}</h4>
             
         </div>
