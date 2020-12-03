@@ -1,11 +1,14 @@
 import { Avatar } from '@material-ui/core';
-import React from 'react';
+
 import "./MessageSender.css";
+import React, {useState} from "react";
 import VideoCamIcon from "@material-ui/icons/Videocam";
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 
 function MessageSender() {
+    const [input,setInput]=useState('');
+    const [imageUrl, setImageUrl]=useState("");
     const handleSubmit = (e) => {
         e.preventDefault();
     };
@@ -15,13 +18,16 @@ function MessageSender() {
             <Avatar />
             {/*taking input of post as a form*/}
             <form>
-
-                <input type="text" 
+                <input 
+                value={input}
+                onChange={(e) => setInput(e.target.value)} 
                 className="messageSender__input"
                 placeholder="Share your feelings"                
                 />
 
                 <input 
+                value={imageUrl}
+                onChange={(e)=> setImageUrl(e.target.value)}
                 placeholder="URL of your media"
                 />
 

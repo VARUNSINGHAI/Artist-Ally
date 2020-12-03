@@ -36,19 +36,19 @@
     display: flex;
     justify-content:space-evenly;
 }
-.messageSender__options {
-    padding: 20px;
+.messageSender__option {
+    padding: 10px;
     display: flex;
     align-items: center;
     color: teal;
     margin: 5px;
 }
-.messageSender__options>h3{
+.messageSender__option>h3{
     font-size: medium;
     margin-left: 10px;
     cursor: pointer;
 }
-.messageSender__options:hover{
+.messageSender__option:hover{
     background-color: rgb(43, 31, 136);
     border-radius: 20px;
 }
