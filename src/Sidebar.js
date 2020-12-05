@@ -9,11 +9,14 @@ import ChatIcon from "@material-ui/icons/Chat";
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import { ExpandMoreOutlined } from '@material-ui/icons';
+import {useStateValue} from "./StateProvider";
+
 function Sidebar() {
+    const[{user},dispatch]=useStateValue();
     return (
         <div className="sidebar">
-            <SidebarRow src="https://images.unsplash.com/photo-1492546662075-aabebf46dee2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80"
-            title=" Varun Singhai"
+            <SidebarRow src={user.photoURL}
+            title={user.displayName}
             />               
             <SidebarRow Icon={EmojiFlagsIcon} title="Pages"/>
             <SidebarRow Icon={PeopleIcon} title="Friends" />
